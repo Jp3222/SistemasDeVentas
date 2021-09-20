@@ -1,8 +1,6 @@
 package Controlador;
 
-import java.lang.reflect.Array;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 import javax.swing.JLabel;
@@ -15,13 +13,14 @@ public class Hilo1 extends Thread {
     private static Hilo1 nodo;
 
     public static Hilo1 getNodo(JLabel Relog) {
-        String d = "" + MonthDay.now();
-        d = d.substring(2, d.length());
-        String[] day = d.split("-");
-        day = Arrays.copyOf(day, 3);
-        day[2] = "" + Year.now();
-        day[2] = day[2].strip();
-        System.out.println(Arrays.toString(day));
+//        String d = "" + MonthDay.now();
+//        d = d.substring(2, d.length());
+//        String[] day = d.split("-");
+//        day = Arrays.copyOf(day, 3);
+//        day[2] = "" + Year.now();
+//        day[2] = day[2].strip();
+
+        System.out.println();
 
         if (nodo == null) {
             return new Hilo1(Relog);
@@ -80,7 +79,7 @@ public class Hilo1 extends Thread {
     }
 
     public boolean Abrir() {
-        boolean abrir = c.get(Calendar.HOUR_OF_DAY) > 6 && c.get(Calendar.HOUR_OF_DAY) <= 22;
+        boolean abrir = c.get(Calendar.HOUR_OF_DAY) > 6 && c.get(Calendar.HOUR_OF_DAY) <= 21;
         return abrir;
     }
 }

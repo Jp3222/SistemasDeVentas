@@ -57,29 +57,20 @@ class Evento {
             return;
         }
         empleado = op.getEmpleado(login.getUsuario());
-        System.out.println("1");
         if (empleado.Existe()) {
-            System.out.println("2");
             if (iniciar(empleado.getUser(), empleado.getPass())) {
-                System.out.println("3");
                 switch (empleado.getCargo()) {
                     case "Gerente":
-                        System.out.println("4");
                         Admin = new AdminMenu(op, login);
-                        System.out.println("5");
                         Admin.setEmpleado(empleado);
-                        System.out.println("6");
                         Admin.setLogin(login);
-                        System.out.println("7");
                         Admin.setVisible(true);
                         break;
                     case "Empleado":
 
                         break;
                 }
-                System.out.println("1");
                 login.dispose();
-                System.out.println("1");
             }
         } else {
             JOptionPane.showMessageDialog(login, "Este Usuario No existe");

@@ -1,9 +1,6 @@
 package sistemadeventas;
 
 import Modelo.Operaciones;
-import java.util.Timer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
 
 public class SistemaDeVentas {

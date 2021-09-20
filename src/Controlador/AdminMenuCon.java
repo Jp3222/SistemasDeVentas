@@ -3,7 +3,6 @@ package Controlador;
 import Modelo.Operaciones;
 import Modelo.Producto;
 import Vista.AdminMenu;
-import Vista.BDProductos;
 import Vista.Productos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,7 +35,6 @@ public class AdminMenuCon implements ActionListener {
         for (String x : c) {
             modelo.addColumn(x);
         }
-
         admin.setJtCanasta(modelo);
     }
 
